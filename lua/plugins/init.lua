@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
     use 'SirVer/ultisnips'
     -- Navigation
     use 'kyazdani42/nvim-tree.lua'
+    use "kevinhwang91/rnvimr"
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
@@ -35,19 +36,22 @@ return require('packer').startup(function(use)
     use { 'iamcco/markdown-preview.nvim', run=':call mkdp#util#install()'}
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
-    use 'windwp/nvim-ts-autotag'
     use 'blackCauldron7/surround.nvim'
     use 'akinsho/nvim-toggleterm.lua'
     -- Debugging
     use 'mfussenegger/nvim-dap'
+    -- Treesitter
+    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use "windwp/nvim-ts-autotag"
+    -- Icons
+    use "kyazdani42/nvim-web-devicons"
+    -- Status Line and Bufferline
+    use "glepnir/galaxyline.nvim"
+    use "romgrk/barbar.nvim"
     -- Theming
-    use 'kyazdani42/nvim-web-devicons'
-    use 'glepnir/galaxyline.nvim'
-    use 'romgrk/barbar.nvim'
-    use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
+    use 'arcticicestudio/nord-vim'
+    use 'rakr/vim-two-firewatch'
+    use "arzg/vim-colors-xcode"
+
     use 'glepnir/dashboard-nvim'
-    use {'ajmwagar/vim-deus', opt=true}
-    use {'arcticicestudio/nord-vim', opt=true}
-    use {'rakr/vim-two-firewatch'  , opt=true}
-    use {'christianchiarulli/nvcode-color-schemes.vim', opt=true}
 end)
