@@ -13,6 +13,7 @@ require('lsp.latex')
 require('lsp.bash')
 require('lsp.vim')
 require('lsp.efm')
+require('lsp.js-ts')
 
 if Python.useKite then
     require('lsp.kite')
