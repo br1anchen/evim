@@ -15,6 +15,7 @@ require('lsp.vim')
 require('lsp.efm')
 require('lsp.js-ts')
 require('lsp.json')
+require('lsp.rust')
 
 if Python.useKite then
     require('lsp.kite')
