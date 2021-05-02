@@ -12,35 +12,34 @@ wk.setup {
             windows = true, -- default bindings on <c-w>
             nav = true, -- misc bindings to work with windows
             z = true, -- bindings for folds, spelling and others prefixed with z
-            g = true, -- bindings for prefixed with g
-        },
+            g = true -- bindings for prefixed with g
+        }
     },
     -- add operators that will trigger motion and text object completion
     -- to enable all native operators, set the preset / operators plugin above
-    operators = { ['<C-_>'] = "Comments" },
+    operators = {['<C-_>'] = "Comments"},
     icons = {
         breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
         separator = "➜", -- symbol used between a key and it's label
-        group = "+", -- symbol prepended to a group
+        group = "+" -- symbol prepended to a group
     },
     window = {
         border = "shadow", -- none, single, double, shadow
         position = "bottom", -- bottom, top
-        margin = { 1, 3, 0, 0 }, -- extra window margin [top, right, bottom, left]
-        padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
+        margin = {1, 3, 0, 0}, -- extra window margin [top, right, bottom, left]
+        padding = {1, 1, 1, 1} -- extra window padding [top, right, bottom, left]
     },
     layout = {
-        height = { min = 4, max = 10 }, -- min and max height of the columns
-        width = { min = 20, max = 300 }, -- min and max width of the columns
-        spacing = 5, -- spacing between columns
+        height = {min = 4, max = 10}, -- min and max height of the columns
+        width = {min = 20, max = 300}, -- min and max width of the columns
+        spacing = 5 -- spacing between columns
     },
-    hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
+    hidden = {"<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
     show_help = true -- show help message on the command line when the popup is visible
 }
 
 -- vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
-
 
 -- NORMAL mode
 local opts = {
@@ -54,21 +53,20 @@ local opts = {
 
 local mappings = {
     [' '] = 'which_key_ignore',
-    f = { '<cmd>Telescope find_files<cr>', 'find files' },
-    H = { '<cmd>Dashboard<cr>', 'home' },
-    ['/'] = { '<cmd>CommentToggle<cr>', 'toggle comment' },
-    ['?'] = { '<cmd>NvimTreeFindFile<cr>', 'find current file' },
-    e = { '<cmd>NvimTreeToggle<cr>', 'explorer' },
-    s = { '<cmd>w<cr>', 'save' },
-    S = { '<cmd>SessionSave<cr>', 'save session' },
-    q = { '<cmd>wqa<cr>', 'save & quit' },
-    w = { '<cmd>q<cr>', 'close window' },
-    x = { '<cmd>BufferClose<cr>', 'close buffer' },
-    ['.'] = { '<cmd>luafile %<cr>', 'source file' },
-    h = { '<cmd>sp<cr>', 'split below' },
-    v = { '<cmd>vert sp<cr>', 'split right' },
-    p = { '<cmd>PasteImg<cr>', 'paste image' },
-    T = { '<cmd>ToggleTerm<cr>', 'toggle terminal' },
+    f = {'<cmd>Telescope find_files<cr>', 'find files'},
+    H = {'<cmd>Dashboard<cr>', 'home'},
+    ['/'] = {'<cmd>CommentToggle<cr>', 'toggle comment'},
+    ['?'] = {'<cmd>NvimTreeFindFile<cr>', 'find current file'},
+    e = {'<cmd>NvimTreeToggle<cr>', 'explorer'},
+    s = {'<cmd>w<cr>', 'save'},
+    S = {'<cmd>SessionSave<cr>', 'save session'},
+    q = {'<cmd>wqa<cr>', 'save & quit'},
+    w = {'<cmd>q<cr>', 'close window'},
+    x = {'<cmd>BufferClose<cr>', 'close buffer'},
+    ['.'] = {'<cmd>luafile %<cr>', 'source file'},
+    h = {'<cmd>sp<cr>', 'split below'},
+    p = {'<cmd>PasteImg<cr>', 'paste image'},
+    T = {'<cmd>ToggleTerm<cr>', 'toggle terminal'},
 
     b = {
         name = '+buffer',
@@ -87,7 +85,7 @@ local mappings = {
         i = {'<cmd>DebugStepInto<cr>', 'step into'},
         o = {'<cmd>DebugStepOver<cr>', 'step over'},
         r = {'<cmd>DebugToggleRepl<cr>', 'toggle repl'},
-        s = {'<cmd>DebugStart<cr>', 'start'},
+        s = {'<cmd>DebugStart<cr>', 'start'}
     },
 
     F = {
@@ -96,19 +94,19 @@ local mappings = {
         C = {'<cmd>set foldlevel=0<cr>', 'close all'},
         c = {'<cmd>foldclose<cr>', 'close'},
         o = {'<cmd>foldopen<cr>', 'open'},
-        ['1']= {'<cmd>set foldlevel=1<cr>', 'level1'},
-        ['2']= {'<cmd>set foldlevel=2<cr>', 'level2'},
-        ['3']= {'<cmd>set foldlevel=3<cr>', 'level3'},
-        ['4']= {'<cmd>set foldlevel=4<cr>', 'level4'},
-        ['5']= {'<cmd>set foldlevel=5<cr>', 'level5'},
-        ['6']= {'<cmd>set foldlevel=6<cr>', 'level6'}
+        ['1'] = {'<cmd>set foldlevel=1<cr>', 'level1'},
+        ['2'] = {'<cmd>set foldlevel=2<cr>', 'level2'},
+        ['3'] = {'<cmd>set foldlevel=3<cr>', 'level3'},
+        ['4'] = {'<cmd>set foldlevel=4<cr>', 'level4'},
+        ['5'] = {'<cmd>set foldlevel=5<cr>', 'level5'},
+        ['6'] = {'<cmd>set foldlevel=6<cr>', 'level6'}
     },
 
     t = {
-        name = '+telescope' ,
-        ['.']= {'<cmd>lua require("plugins.telescope").search_dotfiles{}<cr>', 'config'},
+        name = '+telescope',
+        ['.'] = {'<cmd>lua require("plugins.telescope").search_dotfiles{}<cr>', 'config'},
         ['?'] = {'<cmd>Telescope filetypes<cr>', 'filetypes'},
-        b = {'<cmd>Telescope git_branches<cr>', 'git branches'},
+        g = {'<cmd>Telescope git_branches<cr>', 'git branches'},
         f = {'<cmd>Telescope find_files<cr>', 'files'},
         h = {'<cmd>Telescope command_history<cr>', 'cmd history'},
         p = {'<cmd>Telescope media_files<cr>', 'media'},
@@ -119,11 +117,11 @@ local mappings = {
         r = {'<cmd>Telescope oldfiles<cr>', 'recents'},
         R = {'<cmd>Telescope registers<cr>', 'registers'},
         w = {'<cmd>Telescope file_browser<cr>', 'fuzzy find'},
-        c = {'<cmd>Telescope colorscheme<cr>', 'colorschemes'},
+        c = {'<cmd>Telescope colorscheme<cr>', 'colorschemes'}
     },
 
     g = {
-        name = '+git' ,
+        name = '+git',
         b = {'<cmd>Git blame_line<CR>', 'blame'},
         B = {'<cmd>GBrowse<cr>', 'browse'},
         d = {'<cmd>Git diff<cr>', 'diff'},
@@ -136,11 +134,11 @@ local mappings = {
         s = {'<cmd>Git stage_hunk<CR>', 'stage hunk'},
         S = {'<cmd>Gstatus<cr>', 'status'},
         u = {'<cmd>Git undo_stage_hunk<CR>', 'undo stage hunk'},
-        l = {'<cmd>lua lazygit_toggle()<CR>', 'lazygit'},
+        l = {'<cmd>lua lazygit_toggle()<CR>', 'lazygit'}
     },
 
     l = {
-        name = '+lsp' ,
+        name = '+lsp',
         a = {'<cmd>Lspsaga code_action<cr>', 'code action'},
         A = {'<cmd>Lspsaga range_code_action<cr>', 'selected action'},
         d = {'<cmd>Telescope lsp_document_diagnostics<cr>', 'doc diagnostics'},
@@ -156,16 +154,27 @@ local mappings = {
         T = {'<cmd>LspTypeDefinition<cr>', 'type defintion'},
         x = {'<cmd>cclose<cr>', 'close quickfix'},
         s = {'<cmd>Telescope lsp_document_symbols<cr>', 'document symbols'},
-        S = {'<cmd>Telescope lsp_workspace_symbols<cr>', 'workspace symbols'},
+        S = {'<cmd>Telescope lsp_workspace_symbols<cr>', 'workspace symbols'}
     },
 
     m = {
-        name = '+markdown' ,
+        name = '+markdown',
         p = {'<cmd>MarkdownPreview<cr>', 'preview'},
         s = {'<cmd>MarkdownPreviewStop<cr>', 'stop preview'},
-        t = {'<cmd>MarkdownPreviewToggle<cr>', 'toggle preview'},
-    }
+        t = {'<cmd>MarkdownPreviewToggle<cr>', 'toggle preview'}
+    },
 
+    v = {
+        name = "+Window",
+        ["<"] = {"<C-w><", "Resize width left single column"},
+        [">"] = {"<C-w>>", "Resize width right single column"},
+        ["-"] = {"<C-w>-", "Resize height down single row"},
+        ["+"] = {"<C-w>+", "Resize height up single row"},
+        ["="] = {"<C-w>=", "Reset"},
+        ["s"] = {"<cmd>split<cr>", "Split horizontal"},
+        ["v"] = {"<cmd>vsplit<cr>", "Split vertical"},
+        ["d"] = {"<cmd>close<cr>", "Close split window"}
+    }
 }
 
 wk.register(mappings, opts)
