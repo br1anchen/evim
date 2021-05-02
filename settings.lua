@@ -1,4 +1,4 @@
-Colorscheme = 'deus'
+Colorscheme = 'xcodedark'
 
 WrapLine = false
 LineNumbers = true
@@ -26,7 +26,7 @@ Term.floatBorder = 'shadow' -- single, double, shadow, or curved
 -- false: refresh on save
 MarkdownLiveRefresh = false
 
-Font = "FiraCode Nerd Font:h17"
+Font = "SFMono Nerd Font Mono"
 
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
