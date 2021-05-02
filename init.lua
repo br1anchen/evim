@@ -12,6 +12,7 @@ require('lsp.lua')
 require('lsp.latex')
 require('lsp.bash')
 require('lsp.vim')
+require('lsp.efm')
 
 if Python.useKite then
     require('lsp.kite')
