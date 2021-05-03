@@ -106,6 +106,7 @@ local mappings = {
         name = '+telescope',
         ['.'] = {'<cmd>lua require("plugins.telescope").search_dotfiles{}<cr>', 'config'},
         ['?'] = {'<cmd>Telescope filetypes<cr>', 'filetypes'},
+        b = {'<cmd>Telescope buffers<cr>', 'buffers'},
         g = {'<cmd>Telescope git_branches<cr>', 'git branches'},
         f = {'<cmd>Telescope find_files<cr>', 'files'},
         h = {'<cmd>Telescope command_history<cr>', 'cmd history'},
@@ -116,6 +117,7 @@ local mappings = {
         t = {'<cmd>Telescope live_grep<cr>', 'text'},
         r = {'<cmd>Telescope oldfiles<cr>', 'recents'},
         R = {'<cmd>Telescope registers<cr>', 'registers'},
+        s = {'<cmd>Telescope grep_string<cr>', 'selected string'},
         w = {'<cmd>Telescope file_browser<cr>', 'fuzzy find'},
         c = {'<cmd>Telescope colorscheme<cr>', 'colorschemes'}
     },
