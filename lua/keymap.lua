@@ -10,8 +10,10 @@ map('n', '<C-k>', '<C-w>k', {silent = true})
 map('n', '<C-l>', '<C-w>l', {silent = true})
 
 -- Buffer navigation
-map('n', '<TAB>', ':BufferPrevious<CR>', {noremap = true, silent = true})
-map('n', '<C-TAB>', ':BufferNext<CR>', {noremap = true, silent = true})
+map('n', '<TAB>', '<cmd>BufferNext<CR>', {noremap = true, silent = true})
+map('n', '<C-TAB>', '<cmd>BufferPrevious<CR>', {noremap = true, silent = true})
+map('n', '<M-l>', '<cmd>BufferMoveNext<CR>', {noremap = true, silent = true})
+map('n', '<M-h>', '<cmd>BufferMovePrevious<CR>', {noremap = true, silent = true})
 
 -- File navigation
 map('n', '<C-y>', '3<C-y>', {noremap = true, silent = true})
