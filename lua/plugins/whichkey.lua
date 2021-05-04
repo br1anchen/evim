@@ -62,24 +62,23 @@ local mappings = {
     S = {'<cmd>SessionSave<cr>', 'save session'},
     q = {'<cmd>wqa<cr>', 'save & quit'},
     w = {'<cmd>q<cr>', 'close window'},
-    x = {'<cmd>BufferClose<cr>', 'close buffer'},
     ['.'] = {'<cmd>luafile %<cr>', 'source file'},
     h = {'<cmd>sp<cr>', 'split below'},
     p = {'<cmd>PasteImg<cr>', 'paste image'},
     T = {'<cmd>ToggleTerm<cr>', 'toggle terminal'},
 
     b = {
-        name = '+buffer',
+        name = '+Buffer',
         ['>'] = {'<cmd>BufferMoveNext<cr>', 'move right'},
         ['<'] = {'<cmd>BufferMovePrevious<cr>', 'move left'},
         b = {'<cmd>BufferPick<cr>', 'pick buffer'},
-        c = {'<cmd>BufferClose<cr>', 'close buffer'},
+        d = {'<cmd>BufferClose<cr>', 'close buffer'},
         n = {'<cmd>BufferNext<cr>', 'next buffer'},
         p = {'<cmd>BufferPrevious<cr>', 'prev buffer'}
     },
 
     d = {
-        name = '+debug',
+        name = '+Debug',
         b = {'<cmd>DebugToggleBreakpoint<cr>', 'toggle breakpoint'},
         c = {'<cmd>DebugContinue<cr>', 'continue'},
         i = {'<cmd>DebugStepInto<cr>', 'step into'},
@@ -89,7 +88,7 @@ local mappings = {
     },
 
     F = {
-        name = '+fold',
+        name = '+Fold',
         O = {'<cmd>set foldlevel=20<cr>', 'open all'},
         C = {'<cmd>set foldlevel=0<cr>', 'close all'},
         c = {'<cmd>foldclose<cr>', 'close'},
@@ -103,7 +102,7 @@ local mappings = {
     },
 
     t = {
-        name = '+telescope',
+        name = '+Telescope',
         ['.'] = {'<cmd>lua require("plugins.telescope").search_dotfiles{}<cr>', 'config'},
         ['?'] = {'<cmd>Telescope filetypes<cr>', 'filetypes'},
         b = {'<cmd>Telescope buffers<cr>', 'buffers'},
@@ -123,7 +122,7 @@ local mappings = {
     },
 
     g = {
-        name = '+git',
+        name = '+Git',
         b = {'<cmd>Git blame_line<CR>', 'blame'},
         B = {'<cmd>GBrowse<cr>', 'browse'},
         d = {'<cmd>Git diff<cr>', 'diff'},
@@ -140,7 +139,7 @@ local mappings = {
     },
 
     l = {
-        name = '+lsp',
+        name = '+Lsp',
         a = {'<cmd>Lspsaga code_action<cr>', 'code action'},
         A = {'<cmd>Lspsaga range_code_action<cr>', 'selected action'},
         d = {'<cmd>Telescope lsp_document_diagnostics<cr>', 'doc diagnostics'},
@@ -160,7 +159,7 @@ local mappings = {
     },
 
     m = {
-        name = '+markdown',
+        name = '+Markdown',
         p = {'<cmd>MarkdownPreview<cr>', 'preview'},
         s = {'<cmd>MarkdownPreviewStop<cr>', 'stop preview'},
         t = {'<cmd>MarkdownPreviewToggle<cr>', 'toggle preview'}
@@ -176,6 +175,16 @@ local mappings = {
         ["s"] = {"<cmd>split<cr>", "Split horizontal"},
         ["v"] = {"<cmd>vsplit<cr>", "Split vertical"},
         ["d"] = {"<cmd>close<cr>", "Close split window"}
+    },
+
+    x = {
+        name = "+Trouble",
+        x = {"<cmd>LspTroubleToggle<cr>", "Toggle Lsp trouble"},
+        w = {"<cmd>LspTroubleToggle lsp_workspace_diagnostics<cr>", "Workspace trouble"},
+        d = {"<cmd>LspTroubleToggle lsp_document_diagnostics<cr>", "Document trouble"},
+        l = {"<cmd>LspTroubleToggle loclist<cr>", "Location"},
+        q = {"<cmd>LspTroubleToggle quickfix<cr>", "QuickFix"}
+
     }
 }
 

@@ -1,7 +1,7 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
     use 'SirVer/ultisnips'
+    use 'folke/lsp-trouble.nvim'
     -- Navigation
     use 'kyazdani42/nvim-tree.lua'
     use "kevinhwang91/rnvimr"
@@ -33,7 +34,7 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'terrortylor/nvim-comment'
     use 'kevinhwang91/nvim-bqf'
-    use { 'iamcco/markdown-preview.nvim', run=':call mkdp#util#install()'}
+    use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install()'}
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
     use 'blackCauldron7/surround.nvim'
@@ -52,6 +53,7 @@ return require('packer').startup(function(use)
     use 'arcticicestudio/nord-vim'
     use 'rakr/vim-two-firewatch'
     use "arzg/vim-colors-xcode"
+    use 'folke/lsp-colors.nvim'
 
     use 'glepnir/dashboard-nvim'
 end)
