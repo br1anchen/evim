@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-compe'
     use 'SirVer/ultisnips'
     use 'folke/lsp-trouble.nvim'
+    use "onsails/lspkind-nvim"
     -- Navigation
     use 'kyazdani42/nvim-tree.lua'
     use "kevinhwang91/rnvimr"
@@ -39,6 +40,7 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use 'blackCauldron7/surround.nvim'
     use 'akinsho/nvim-toggleterm.lua'
+    use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
     -- Debugging
     use 'mfussenegger/nvim-dap'
     -- Treesitter
