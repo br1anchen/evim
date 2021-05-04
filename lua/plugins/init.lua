@@ -60,4 +60,6 @@ return require('packer').startup(function(use)
     use 'folke/lsp-colors.nvim'
 
     use 'glepnir/dashboard-nvim'
+
+    use 'pwntester/octo.nvim'
 end)
