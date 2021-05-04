@@ -38,7 +38,8 @@ return require('packer').startup(function(use)
     use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install()'}
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
-    use 'blackCauldron7/surround.nvim'
+    use 'tpope/vim-surround'
+    use 'justinmk/vim-sneak'
     use 'akinsho/nvim-toggleterm.lua'
     use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
     -- Debugging
