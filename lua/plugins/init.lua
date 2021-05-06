@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
     use 'justinmk/vim-sneak'
     use 'akinsho/nvim-toggleterm.lua'
+    use 'kdheepak/lazygit.nvim'
     use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
     -- Debugging
     use 'mfussenegger/nvim-dap'
