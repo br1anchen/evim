@@ -75,6 +75,19 @@ table.insert(tsserver_args, prettier)
 
 table.insert(tsserver_args, eslint)
 
+local css_args = {}
+
+local stylelint = {
+    lintCommand = 'stylelint --stdin --stdin-filename ${INPUT} --formatter compact',
+    lintIgnoreExitCode = true,
+    lintStdin = true,
+    lintFormats = {'%f: line %l, col %c, %tarning - %m', '%f: line %l, col %c, %trror - %m'},
+    formatCommand = 'stylelint --fix --stdin --stdin-filename ${INPUT}',
+    formatStdin = true
+}
+
+table.insert(css_args, stylelint)
+
 -- local markdownlint = {
 --     -- TODO default to global lintrc
 --     -- lintcommand = 'markdownlint -s -c ./markdownlintrc',
@@ -104,7 +117,7 @@ require"lspconfig".efm.setup {
             typescript = tsserver_args,
             typescriptreact = tsserver_args,
             html = {prettier},
-            css = {prettier},
+            css = css_args,
             json = {prettier},
             yaml = {prettier},
             markdown = {markdownPandocFormat}

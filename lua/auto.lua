@@ -1,15 +1,15 @@
 local api = vim.api
 
 local function augroups(definitions)
-	for group_name, definition in pairs(definitions) do
-		api.nvim_command('augroup '..group_name)
-		api.nvim_command('autocmd!')
-		for _, def in ipairs(definition) do
-			local command = table.concat(vim.tbl_flatten{'autocmd', def}, ' ')
-			api.nvim_command(command)
-		end
-		api.nvim_command('augroup END')
-	end
+    for group_name, definition in pairs(definitions) do
+        api.nvim_command('augroup ' .. group_name)
+        api.nvim_command('autocmd!')
+        for _, def in ipairs(definition) do
+            local command = table.concat(vim.tbl_flatten {'autocmd', def}, ' ')
+            api.nvim_command(command)
+        end
+        api.nvim_command('augroup END')
+    end
 end
 
 local auto_formatters = {}
@@ -35,27 +35,24 @@ table.insert(auto_formatters, json_format)
 local ruby_format = {'BufWritePre', '*.rb', 'lua vim.lsp.buf.formatting_sync(nil,1000)'}
 table.insert(auto_formatters, ruby_format)
 
+local css_autoformat = {'BufWritePre', '*.css', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+table.insert(auto_formatters, css_autoformat)
+
 augroups({
-	_global = {
+    _global = {
         {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},
-		{'BufWritePre', '*', ':call TrimWhitespace()'},
+        {'BufWritePre', '*', ':call TrimWhitespace()'},
         {'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
         {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
         {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'}
-	},
+    },
     _dashboard = {
         {
             'FileType', 'dashboard',
             'setlocal nocursorline noswapfile synmaxcol& signcolumn=no norelativenumber nocursorcolumn nospell  nolist  nonumber bufhidden=wipe colorcolumn= foldcolumn=0 matchpairs= '
-        },
-        {
-            'FileType', 'dashboard',
-            'set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2'
-        }
+        }, {'FileType', 'dashboard', 'set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2'}
     },
-    _markdown = {
-        {'FileType', 'markdown', 'setlocal spell foldexpr=MarkdownLevel() foldmethod=expr nofoldenable'}
-    },
+    _markdown = {{'FileType', 'markdown', 'setlocal spell foldexpr=MarkdownLevel() foldmethod=expr nofoldenable'}},
     _solidity = {
         {'BufWinEnter', '.sol', 'setlocal filetype=solidity'}, {'BufRead', '*.sol', 'setlocal filetype=solidity'},
         {'BufNewFile', '*.sol', 'setlocal filetype=solidity'}
