@@ -165,6 +165,16 @@ local mappings = {
         t = {'<cmd>MarkdownPreviewToggle<cr>', 'toggle preview'}
     },
 
+    o = {
+        name = '+Octo',
+        d = {'<cmd>Octo review discard<cr>', 'deletes a pending review'},
+        m = {'<cmd>Octo pr merge rebase<cr>', 'rebase merge pr'},
+        r = {'<cmd>Octo review start<cr>', 'start review'},
+        s = {'<cmd>Octo review submit<cr>', 'submit review'},
+        p = {'<cmd>Octo review resume<cr>', 'resume review'},
+        P = {'<cmd>Octo pr list<cr>', 'list all PRs'}
+    },
+
     v = {
         name = "+Window",
         ["<"] = {"<C-w><", "Resize width left single column"},
