@@ -62,5 +62,8 @@ return require('packer').startup(function(use)
 
     use 'glepnir/dashboard-nvim'
 
+    -- Github
     use 'pwntester/octo.nvim'
+    -- Email
+    use {'soywod/himalaya', rtp = "vim"}
 end)

@@ -58,12 +58,12 @@ local mappings = {
     ['/'] = {'<cmd>CommentToggle<cr>', 'toggle comment'},
     ['?'] = {'<cmd>NvimTreeFindFile<cr>', 'find current file'},
     e = {'<cmd>NvimTreeToggle<cr>', 'explorer'},
+    h = {'<cmd>Himalaya<cr>', 'open Himalaya email client'},
     s = {'<cmd>w<cr>', 'save'},
     S = {'<cmd>SessionSave<cr>', 'save session'},
     q = {'<cmd>wqa<cr>', 'save & quit'},
     w = {'<cmd>q<cr>', 'close window'},
     ['.'] = {'<cmd>luafile %<cr>', 'source file'},
-    h = {'<cmd>sp<cr>', 'split below'},
     p = {'<cmd>PasteImg<cr>', 'paste image'},
     T = {'<cmd>ToggleTerm<cr>', 'toggle terminal'},
 
