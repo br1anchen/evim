@@ -1,4 +1,5 @@
-Colorscheme = 'xcodedark'
+local fn = vim.fn
+Colorscheme = 'tokyonight'
 
 WrapLine = false
 LineNumbers = true
@@ -28,5 +29,5 @@ MarkdownLiveRefresh = false
 
 Font = "SFMono Nerd Font Mono"
 
-DATA_PATH = vim.fn.stdpath('data')
-CACHE_PATH = vim.fn.stdpath('cache')
+DATA_PATH = fn.stdpath('data')
+CACHE_PATH = fn.stdpath('cache')
