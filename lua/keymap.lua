@@ -56,3 +56,15 @@ map('t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true})
 
 -- ================================ UNMAP =====================================
 map('n', 'Q', '<NOP>', {noremap = true, silent = true})
+
+-- URL handling
+-- https://github.com/vim/vim/issues/4738
+if vim.fn.has("mac") == 1 then
+    map('n', 'gx', '<Cmd>call jobstart(["open", expand("<cfile>")], {"detach": v:true})<CR>',
+        {noremap = true, silent = true})
+elseif vim.fn.has("unix") == 1 then
+    map('n', 'gx', '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>',
+        {noremap = true, silent = true})
+else
+    map('n', 'gx', '<Cmd>lua print("Error: gx is not supported on this OS!")<CR>', {noremap = true, silent = true})
+end
