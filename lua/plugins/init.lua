@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
     use "arzg/vim-colors-xcode"
     use 'folke/lsp-colors.nvim'
     use 'folke/tokyonight.nvim'
+    use 'shaunsingh/nord.nvim'
 
     use 'glepnir/dashboard-nvim'
 
