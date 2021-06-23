@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
     use 'akinsho/nvim-toggleterm.lua'
     use 'kdheepak/lazygit.nvim'
     use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+    use 'tpope/vim-abolish'
     -- Debugging
     use 'mfussenegger/nvim-dap'
     -- Treesitter
