@@ -66,6 +66,7 @@ local mappings = {
     ['.'] = {'<cmd>luafile %<cr>', 'source file'},
     p = {'<cmd>PasteImg<cr>', 'paste image'},
     T = {'<cmd>ToggleTerm<cr>', 'toggle terminal'},
+    R = {'<cmd>checktime<cr>', 'reload session'},
 
     b = {
         name = '+Buffer',
