@@ -1,4 +1,3 @@
-vim.o.t_Co="256"
 vim.o.termguicolors=true
 vim.o.background="dark"
 vim.cmd('let &t_8f = "\\<Esc>[38;2;%lu;%lu;%lum"')
