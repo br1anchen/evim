@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
     -- Treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use "windwp/nvim-ts-autotag"
+    use "lewis6991/spellsitter.nvim"
     -- Icons
     use "kyazdani42/nvim-web-devicons"
     -- Status Line and Bufferline
