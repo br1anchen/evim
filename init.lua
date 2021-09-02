@@ -16,6 +16,7 @@ require('lsp.efm')
 require('lsp.js-ts')
 require('lsp.json')
 require('lsp.rust')
+require('lsp.tailwindcss')
 
 if Python.useKite then
     require('lsp.kite')
