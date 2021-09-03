@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
     use 'folke/lsp-colors.nvim'
     use 'folke/tokyonight.nvim'
     use 'shaunsingh/nord.nvim'
+    use 'rose-pine/neovim'
 
     use 'glepnir/dashboard-nvim'
 
