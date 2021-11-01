@@ -124,7 +124,7 @@ local mappings = {
 
     g = {
         name = '+Git',
-        b = {'<cmd>Git blame_line<CR>', 'blame'},
+        b = {'<cmd>Git blame<CR>', 'blame'},
         B = {'<cmd>GBrowse<cr>', 'browse'},
         d = {'<cmd>Git diff<cr>', 'diff'},
         j = {'<cmd>Git next_hunk<CR>', 'next hunk'},
