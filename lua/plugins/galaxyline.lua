@@ -1,3 +1,4 @@
+local fn = vim.fn
 local gl = require('galaxyline')
 local colors = {
     bg = "#1e222a",
@@ -58,6 +59,17 @@ gls.left[4] = {
 }
 
 gls.left[5] = {
+    DirectoryName = {
+        provider = function()
+            local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+            return "  " .. dir_name .. " "
+        end,
+        condition = condition.buffer_not_empty,
+        highlight = {colors.fg, colors.lightbg}
+    }
+}
+
+gls.left[6] = {
     teech = {
         provider = function()
             return ""
@@ -72,7 +84,7 @@ local checkwidth = function()
     return false
 end
 
-gls.left[6] = {
+gls.left[7] = {
     DiffAdd = {
         provider = "DiffAdd",
         condition = checkwidth,
@@ -81,7 +93,7 @@ gls.left[6] = {
     }
 }
 
-gls.left[7] = {
+gls.left[8] = {
     DiffModified = {
         provider = "DiffModified",
         condition = checkwidth,
@@ -90,7 +102,7 @@ gls.left[7] = {
     }
 }
 
-gls.left[8] = {
+gls.left[9] = {
     DiffRemove = {
         provider = "DiffRemove",
         condition = checkwidth,
@@ -99,7 +111,7 @@ gls.left[8] = {
     }
 }
 
-gls.left[9] = {
+gls.left[10] = {
     LeftEnd = {
         provider = function()
             return " "
@@ -110,11 +122,11 @@ gls.left[9] = {
     }
 }
 
-gls.left[10] = {DiagnosticError = {provider = "DiagnosticError", icon = "  ", highlight = {colors.red, colors.bg}}}
+gls.left[11] = {DiagnosticError = {provider = "DiagnosticError", icon = "  ", highlight = {colors.red, colors.bg}}}
 
-gls.left[11] = {DiagnosticWarn = {provider = "DiagnosticWarn", icon = "  ", highlight = {colors.yellow, colors.bg}}}
+gls.left[12] = {DiagnosticWarn = {provider = "DiagnosticWarn", icon = "  ", highlight = {colors.yellow, colors.bg}}}
 
-gls.left[12] = {DiagnosticHint = {provider = 'DiagnosticHint', icon = '  ', highlight = {colors.blue, colors.bg}}}
+gls.left[13] = {DiagnosticHint = {provider = 'DiagnosticHint', icon = '  ', highlight = {colors.blue, colors.bg}}}
 
 gls.right[1] = {
     GitIcon = {
