@@ -19,10 +19,11 @@ return require('packer').startup(function(use)
     use 'glepnir/lspsaga.nvim'
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
-    use {'tzachar/compe-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-compe'}
+    -- use {'tzachar/compe-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-compe'}
     use 'SirVer/ultisnips'
     use 'folke/lsp-trouble.nvim'
     use "onsails/lspkind-nvim"
+    use 'github/copilot.vim'
     -- Navigation
     use 'kyazdani42/nvim-tree.lua'
     use "kevinhwang91/rnvimr"

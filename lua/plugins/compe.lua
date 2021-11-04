@@ -21,15 +21,15 @@ require'compe'.setup {
         nvim_lua = {kind = ""},
         spell = {kind = "", filetypes = {"markdown"}},
         ultisnips = {kind = ""},
-        emoji = {kind = "ﲃ", filetypes = {"markdown"}},
-        tabnine = {
-            max_line = 1000,
-            max_num_results = 6,
-            priority = 5000,
-            sort = false,
-            show_prediction_strength = true,
-            ignore_pattern = ''
-        }
+        emoji = {kind = "ﲃ", filetypes = {"markdown"}}
+        -- tabnine = {
+        --     max_line = 1000,
+        --     max_num_results = 6,
+        --     priority = 5000,
+        --     sort = false,
+        --     show_prediction_strength = true,
+        --     ignore_pattern = ''
+        -- }
     }
 }
 
